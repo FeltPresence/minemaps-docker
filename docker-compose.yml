@@ -1,20 +1,18 @@
 services:
   backend:
-    build: ./backend
+    image: tawongarakata01/minemaps-backend:1.0
     ports:
       - "8000:8000"
     networks:
       - app-network
 
   frontend:
-    build: ./frontend
+    image: tawongarakata01/minemaps-frontend:1.0
     ports:
       - "5173:80"
     networks:
       - app-network
 
-
 networks:
   app-network:
     driver: bridge
-
